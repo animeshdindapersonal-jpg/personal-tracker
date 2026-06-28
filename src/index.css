@@ -1,0 +1,21 @@
+/* Astryx baseline: reset + theme tokens. The StyleX build plugin generates
+   component/typography styles itself, so only reset + theme.css are imported.
+   (This package version does not ship a typography.css.) */
+@import '@astryxdesign/core/reset.css';
+@import '@astryxdesign/theme-neutral/theme.css';
+
+/* Placeholder marker so Vite reliably emits a CSS asset for StyleX aggregation. */
+:root {
+  --stylex-injection: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background-body, #fafafa);
+}
